@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YuuRide</title>
+</head>
+<body id="top">
+
+<header>
+<h1>YuuRide</h1>
+<p><em>Your Reliable Transportation App</em></p>
+<nav>
+<a href="#book">Book a Ride</a> |
+<a href="#fleet">Our Vehicles</a> |
+<a href="#media">Media</a> |
+<a href="#schedule">Schedule</a> |
+<a href="#contact">Contact</a>
+</nav>
+<hr>
+</header>
+
+<main>
+<!-- STEP 2: BOOKING FORM -->
+<section id="book">
+<h2>Book a Ride</h2>
+<form action="#" method="post">
+<fieldset>
+<legend>Trip Details</legend>
+
+<p>
+<label for="fullname">Full name:</label><br>
+<input type="text" id="fullname" name="fullname" placeholder="Yurij Sacoco" required>
+</p>
+
+<p>
+<label for="phone">Phone number:</label><br>
+<input type="tel" id="phone" name="phone" placeholder="09XX-XXX-XXXX" required>
+</p>
+
+<p>
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" placeholder="name@example.com">
+</p>
+
+<p>
+<label for="pickup">Pick-up location:</label><br>
+<input type="text" id="pickup" name="pickup" list="places">
+</p>
+
+<p>
+<label for="dropoff">Drop-off location:</label><br>
+<input type="text" id="dropoff" name="dropoff" list="places">
+</p>
+
+<datalist id="places">
+<option value="Abanao Square"></option>
+<option value="City Hall"></option>
+<option value="University of Baguio"></option>
+<option value="Igorot Garden"></option>
+<option value="Burnham Park"></option>
+<option value="Athletic Bowl"></option>
+<option value="SM Baguio"></option>
+<option value="Public Market"></option>
+<option value="Cedar Peak"></option>
+</datalist>
+
+<p>
+<label for="trip-date">Date:</label>
+<input type="date" id="trip-date" name="trip-date" required>
+
+<label for="trip-time">Time:</label>
+<input type="time" id="trip-time" name="trip-time" required>
+</p>
+
+<p>
+<label for="passengers">Passengers (1-10):</label>
+<input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+</p>
+
+<p>
+<label for="vehicle">Vehicle type:</label>
+<select id="vehicle" name="vehicle">
+<option value="Taxi">Taxi</option>
+<option value="Van">Van</option>
+<option value="Shuttle Bus">Shuttle Bus</option>
+<option value="Motorcycle Taxi">Motorcycle Taxi</option>
+<option value="Tricycle">Tricycle</option>
+</select>
+</p>
+
+<p>
+<label>Payment method:</label><br>
+<input type="radio" id="cash" name="payment" value="Cash" checked>
+<label for="cash">Cash</label>
+<input type="radio" id="card" name="payment" value="Card">
+<label for="card">Card</label>
+<input type="radio" id="ewallet" name="payment" value="E-Wallet">
+<label for="ewallet">E-Wallet</label>
+</p>
+
+<p>
+<label>Extras:</label><br>
+<input type="checkbox" id="luggage" name="extras" value="Extra luggage">
+<label for="luggage">Extra luggage</label><br>
+<input type="checkbox" id="childseat" name="extras" value="Child seat">
+<label for="childseat">Child seat</label><br>
+<input type="checkbox" id="wheelchair" name="extras" value="Wheelchair accessible">
+<label for="wheelchair">Wheelchair accessible</label>
+</p>
+
+<p>
+<label for="notes">Notes for the driver:</label><br>
+<textarea id="notes" name="notes" rows="4" cols="40" placeholder="Special instructions, Specific locations (etc.)"></textarea>
+</p>
+
+<p>
+<input type="checkbox" id="terms" name="terms" required>
+<label for="terms">I agree to the <a href="#terms-info">Terms & Conditions</a></label>
+</p>
+
+<p>
+<button type="submit">Book Now</button>
+<button type="reset">Clear</button>
+</p>
+</fieldset>
+</form>
+<hr>
+</section>
+
+<!-- STEP 3: VEHICLE IMAGES -->
+<section id="fleet">
+<h2>Our Vehicles</h2>
+
+<figure>
+<img src="taxe.jpg" alt="A YuuRide Monster Taxi" width="400" height="250">
+<figcaption><strong>Monster Taxi</strong> — Traffic Immune, for up to 4 passengers.</figcaption>
+</figure>
+
+<figure>
+<img src="van.jpg" alt="A YuuRide Mystery Van" width="400" height="250">
+<figcaption><strong>Mystery Van</strong> — Ideal for curious and mystery-driven people,for groups up to 10.</figcaption>
+</figure>
+
+<figure>
+<img src="bus.jpg" alt="A YuuRide Versatility Bus" width="400" height="250">
+<figcaption><strong>Versatility Bus</strong> — Can drive both upright and upside down, for big groups of people up to 20.</figcaption>
+</figure>
+
+<hr>
+</section>
+
+
+<!-- STEP 5: VIDEO & AUDIO -->
+<section id="media">
+<h2>Media</h2>
+
+<h3>How YuuRide Works (Video)</h3>
+<video width="480" controls poster="cat.jpg">
+<source src="cat.mp4" type="video/mp4">
+</video>
+
+<h3>Driver Announcement (Audio)</h3>
+<audio controls>
+<source src="cat.mp3" type="audio/mpeg">
+</audio>
+
+<h3>Watch on YouTube (Embedded)</h3>
+<iframe
+width="480"
+height="270"
+src="https://www.youtube.com/embed/Aq5WXmQQooo"
+title="YuuRide YouTube Video"
+allowfullscreen>
+</iframe>
+<hr>
+</section>
+
+<!-- STEP 6: SCHEDULE TABLE & ROUTE FORM -->
+<section id="schedule">
+<h2>Versatility Bus Schedule</h2>
+
+<table border="1" cellpadding="6" cellspacing="0">
+<caption>Daily departures from Central Terminal</caption>
+<thead>
+<tr>
+<th>Route</th>
+<th>Departure</th>
+<th>Arrival</th>
+<th>Fare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Terminal → City Hall</td>
+<td>6:00 AM</td>
+<td>6:30 AM</td>
+<td>₱30</td>
+</tr>
+<tr>
+<td>Terminal → University</td>
+<td>7:00 AM</td>
+<td>7:40 AM</td>
+<td>₱45</td>
+</tr>
+<tr>
+<td>Terminal → Airport</td>
+<td>9:00 AM</td>
+<td>10:00 AM</td>
+<td>₱120</td>
+</tr>
+<tr>
+<td>Terminal → Public Market</td>
+<td>1:00 PM</td>
+<td>1:25 PM</td>
+<td>₱25</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Check Your Route</h3>
+<form action="#" method="get">
+<p>
+<label for="route-select">Choose a route:</label>
+<select id="route-select" name="route">
+<option value="Terminal - City Hall">Terminal → City Hall</option>
+<option value="Terminal - University">Terminal → University</option>
+<option value="Terminal - Airport">Terminal → Airport</option>
+<option value="Terminal - Public Market">Terminal → Public Market</option>
+</select>
+<button type="submit">Search</button>
+</p>
+</form>
+<hr>
+</section>
+
+<!-- STEP 7: CONTACT & FEEDBACK -->
+<section id="contact">
+<h2>Contact & Feedback</h2>
+
+<form action="#" method="post" enctype="multipart/form-data">
+<fieldset>
+<legend>Send Feedback</legend>
+
+<p>
+<label for="fb-name">Your name:</label><br>
+<input type="text" id="fb-name" name="fb-name" required>
+</p>
+
+<p>
+<label for="rating">Rate your ride (1-5):</label><br>
+<input type="range" id="rating" name="rating" min="1" max="5" value="5">
+</p>
+
+<p>
+<label for="topic">Topic:</label><br>
+<select id="topic" name="topic">
+<option value="Compliment">Compliment</option>
+<option value="Complaint">Complaint</option>
+<option value="Lost item">Lost item</option>
+<option value="Suggestion">Suggestion</option>
+</select>
+</p>
+
+<p>
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="5" cols="40" required></textarea>
+</p>
+
+<p>
+<label for="photo">Attach a photo (optional):</label><br>
+<input type="file" id="photo" name="photo" accept="image/*">
+</p>
+
+<p>
+<button type="submit">Send Feedback</button>
+</p>
+</fieldset>
+</form>
+
+<h3>Reach Us</h3>
+<address>
+<strong>YuuRide Transport Co.</strong><br>
+123 Central Avenue, Manila, Philippines<br>
+Phone: <a href="tel:+639171234567">+63 917 123 4567</a><br>
+Email: <a href="mailto:support@yuuride.example">support@YuuRide.example</a>
+</address>
+<hr>
+</section>
+
+<!-- STEP 8: LINKS & TERMS -->
+<section id="links">
+<h2>Useful Links</h2>
+<ul>
+<li><a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a></li>
+<li><a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a></li>
+<li><a href="https://facebook.com" target="_blank" rel="noopener">Our Facebook Page</a></li>
+<li><a href="#top">Back to top</a></li>
+</ul>
+</section>
+
+<section id="terms-info">
+<h2>Terms & Conditions</h2>
+<details>
+<summary>Read the terms</summary>
+<ol>
+<li>Passengers must arrive at least 5 minutes before scheduled departure time.</li>
+<li>No smoking or eating allowed inside the vehicles.</li>
+<li>YuuRide is not responsible for items left behind after a trip.</li>
+</ol>
+</details>
+</section>
+</main>
+
+<footer>
+<hr>
+<p>© 2026 YuuRide Transport Co. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
